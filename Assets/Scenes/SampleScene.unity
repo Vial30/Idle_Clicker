@@ -593,11 +593,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &561247251 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2175395480757107785, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
-  m_PrefabInstance: {fileID: 2771607024009406828}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &905441462
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 905441464}
   - component: {fileID: 905441463}
+  - component: {fileID: 905441465}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -632,8 +628,17 @@ MonoBehaviour:
   - {fileID: 7340257007319344209, guid: eb7f07364da00784db7f082d636cbb0a, type: 3}
   - {fileID: 9099816725776330844, guid: 7a385a76d0f02024c985d5701ce713b3, type: 3}
   - {fileID: 2771607024140406350, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
+  backgrounds:
+  - {fileID: 21300000, guid: 66b30e6c55980bd4b90d930ab7e5a442, type: 3}
+  - {fileID: 21300000, guid: a8ce44b4bd191804c85975a44f2c6082, type: 3}
+  - {fileID: 21300000, guid: 868b17b044a49b948ab54a2dfb6facae, type: 3}
+  - {fileID: 21300000, guid: 40e9c65e7d584a54bb1fed959eab7ff6, type: 3}
+  - {fileID: 21300000, guid: 030bb67e20b65f848b7fb447e043fd4d, type: 3}
   canvas: {fileID: 457710600}
+  background: {fileID: 425225823}
+  enemyLeft: 2
   currentEnemy: 3
+  currentBg: 0
 --- !u!4 &905441464
 Transform:
   m_ObjectHideFlags: 0
@@ -649,6 +654,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905441465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905441462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f487cac167f99244ba2e7b5ee5187307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  goldText: {fileID: 2080573598}
+--- !u!82 &925182681 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6478719828827061086, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
+  m_PrefabInstance: {fileID: 2771607024009406828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &970139427 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2771607024140406351, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
@@ -969,7 +993,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gold : 1000'
+  m_text: 'Gold : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1053,6 +1077,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 457710600}
     m_Modifications:
+    - target: {fileID: 2175395480757107785, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cc2ebbf80d687b244af9d88d741a1e6a, type: 3}
     - target: {fileID: 2771607024140406346, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -1064,7 +1092,7 @@ PrefabInstance:
     - target: {fileID: 2771607024140406346, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 561247251}
+      objectReference: {fileID: 925182681}
     - target: {fileID: 2771607024140406346, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -1080,6 +1108,14 @@ PrefabInstance:
     - target: {fileID: 2771607024140406346, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771607024140406347, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
+      propertyPath: hp
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771607024140406347, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
+      propertyPath: hpMax
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2771607024140406350, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_Name

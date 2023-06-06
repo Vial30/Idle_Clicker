@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     }
 
     public void Dead(){
+        GameManager.instance.AddGold(goldToGive);
         EnemyManager.instance.DestroyEnemy(gameObject);
 
     }

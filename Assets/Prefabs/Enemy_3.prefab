@@ -13,11 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9099816725776330841, guid: 7a385a76d0f02024c985d5701ce713b3, type: 3}
       propertyPath: hp
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9099816725776330841, guid: 7a385a76d0f02024c985d5701ce713b3, type: 3}
       propertyPath: hpMax
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9099816725776330841, guid: 7a385a76d0f02024c985d5701ce713b3, type: 3}
       propertyPath: goldToGive
@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 60650662cbf502d479c9affd87f7638b, type: 3}
     - target: {fileID: 9099816725776330844, guid: 7a385a76d0f02024c985d5701ce713b3, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Enemy_3
       objectReference: {fileID: 0}
     - target: {fileID: 9099816725776330845, guid: 7a385a76d0f02024c985d5701ce713b3, type: 3}
       propertyPath: m_Pivot.x
