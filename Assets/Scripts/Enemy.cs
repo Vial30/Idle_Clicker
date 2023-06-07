@@ -10,11 +10,17 @@ public class Enemy : MonoBehaviour
     public int goldToGive;
 
     public Image hpImage;
+    public Animation anim;
 
     public void Damage(){
         hp--;
         SetHPBar();
+
+        anim.Stop();
+        anim.Play();   
+
         if(hp <= 0) Dead();
+
     }
 
     public void SetHPBar(){

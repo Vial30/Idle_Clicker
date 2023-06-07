@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
     public Sprite[] backgrounds;
     public Transform canvas;
     public Image background;
+    public Enemy enemy;
 
     public static EnemyManager instance;
 
@@ -29,11 +30,12 @@ public class EnemyManager : MonoBehaviour
         }
         currentEnemy = _randomEnemy;
 
-        GameObject enemy = Instantiate(enemyPrefabs[currentEnemy], canvas);
+        GameObject _enemy = Instantiate(enemyPrefabs[currentEnemy], canvas);
+        enemy = _enemy.GetComponent<Enemy>();
     }
 
-    public void DestroyEnemy(GameObject enemy){
-        Destroy(enemy);
+    public void DestroyEnemy(GameObject _enemy){
+        Destroy(_enemy);
         SpawnEnemy();
         ChechBackground();
     }

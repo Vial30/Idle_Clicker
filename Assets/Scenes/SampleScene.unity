@@ -604,6 +604,7 @@ GameObject:
   - component: {fileID: 905441464}
   - component: {fileID: 905441463}
   - component: {fileID: 905441465}
+  - component: {fileID: 905441466}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -636,6 +637,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 030bb67e20b65f848b7fb447e043fd4d, type: 3}
   canvas: {fileID: 457710600}
   background: {fileID: 425225823}
+  enemy: {fileID: 1132333720}
   enemyLeft: 2
   currentEnemy: 3
   currentBg: 0
@@ -668,6 +670,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: 0
   goldText: {fileID: 2080573598}
+--- !u!114 &905441466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905441462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35ada598884bd746ac88bce8db557cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoClickerText: {fileID: 1988257688}
+  lastTimeClicked: []
+  price: 10
 --- !u!82 &925182681 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 6478719828827061086, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
@@ -676,6 +693,22 @@ AudioSource:
 --- !u!224 &970139427 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2771607024140406351, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
+  m_PrefabInstance: {fileID: 2771607024009406828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1132333720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2771607024140406347, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
+  m_PrefabInstance: {fileID: 2771607024009406828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19f29b4ea4899249bf13042c83dbdb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!111 &1132333723 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 5831273129218537248, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
   m_PrefabInstance: {fileID: 2771607024009406828}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1556733456
@@ -761,7 +794,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1556733459}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 905441466}
+        m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
+        m_MethodName: BuyAutoClicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1556733459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,8 +880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: 418}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -478.54468, y: 401.99127}
+  m_SizeDelta: {x: 202.9106, y: 82.0175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1988257688
 MonoBehaviour:
@@ -858,7 +903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X 10
+  m_text: X 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -885,8 +930,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -921,7 +966,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -26.196045}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1113,6 +1158,10 @@ PrefabInstance:
       propertyPath: hp
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 2771607024140406347, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1132333723}
     - target: {fileID: 2771607024140406347, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: hpMax
       value: 12

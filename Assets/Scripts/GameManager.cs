@@ -17,4 +17,8 @@ public class GameManager : MonoBehaviour
         gold += _gold;
         goldText.text = "Gold : " + gold;
     }
+    public void TakeGold(int _gold){
+        gold -= _gold;
+        goldText.text = "Gold : " + gold;
+    }
 }

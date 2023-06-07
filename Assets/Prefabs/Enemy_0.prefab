@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 8788233662515647180}
   - component: {fileID: 8788233662515647183}
   - component: {fileID: 8788233662515647182}
+  - component: {fileID: 1111388623865129892}
   m_Layer: 5
   m_Name: Enemy_0
   m_TagString: Untagged
@@ -229,6 +230,7 @@ MonoBehaviour:
   hpMax: 10
   goldToGive: 10
   hpImage: {fileID: 8788233662622363725}
+  anim: {fileID: 1111388623865129892}
 --- !u!114 &8788233662515647182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,6 +299,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!111 &1111388623865129892
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8788233662515647178}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2926f5355c18c464fb690de3cf0adce2, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2926f5355c18c464fb690de3cf0adce2, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8788233662622363723
 GameObject:
   m_ObjectHideFlags: 0
