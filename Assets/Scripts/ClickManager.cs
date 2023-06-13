@@ -6,6 +6,7 @@ using TMPro;
 public class ClickManager : MonoBehaviour
 {
     public TextMeshProUGUI autoClickerText;
+    public TextMeshProUGUI buyAutoclick;
 
     public List<float> lastTimeClicked = new List<float>();
     public int price;
@@ -27,6 +28,9 @@ public class ClickManager : MonoBehaviour
             lastTimeClicked.Add(Time.time);
             autoClickerText.text = "X " + lastTimeClicked.Count;
             GameManager.instance.TakeGold(price);
+            price=price+5;
+            buyAutoclick.text = "Buy Autoclick " + price;
+
         }
 
     }

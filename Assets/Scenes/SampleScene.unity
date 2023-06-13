@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 121260754}
   - component: {fileID: 121260753}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Buy Autoclick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,9 +249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Buy Autoclick
-
-    10 Gold'
+  m_text: 'Buy Autoclick : 5'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -683,8 +681,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoClickerText: {fileID: 1988257688}
+  buyAutoclick: {fileID: 121260753}
   lastTimeClicked: []
-  price: 10
+  price: 5
 --- !u!82 &925182681 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 6478719828827061086, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
@@ -1180,7 +1179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2771607024140406351, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2771607024140406351, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1224,23 +1223,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2771607024140406351, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2771607024140406351, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2771607024140406351, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2771607024140406351, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7.0356
+      value: 7.0355225
       objectReference: {fileID: 0}
     - target: {fileID: 2771607024140406351, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 10.5533
+      value: 10.553299
       objectReference: {fileID: 0}
     - target: {fileID: 2771607024140406351, guid: 194c9da0db886904f81536dda3d5d48a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
